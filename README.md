@@ -10,21 +10,29 @@ Welcome to the future of Loan Management! Tired of manually tracking loans betwe
 - 🌐 **Shared Access**: Keep everyone in the loop! Update and share your loan status easily with Google Sheets and Google Forms.
 
 ## Screenshots 📸
-*[To be filled in with actual screenshots]*
+
+**Monthly Details**
+
+![](monthly-details.png)
+
+In this screenshot, take note of the highlighted cells that indicate the "Remaining Loan Amount" over different periods. Initially, the loan amount is 5,000 and it doubles to 10,000 within one year, due to a yearly interest rate of 100%. When the interest rate is adjusted to 4.5%, the remaining amount grows from 10,000 to 10,450 over the span of another year. This serves as proof of the system's accurate and dynamic interest calculation capabilities.
 
 ## How to Get Started
 
 ### Step 1: Duplicate the Files 📋
 
 #### Google Spreadsheet
-- **Step 1.1**: Click on this [Google Spreadsheet link](HyperlinkHere).
+- **Step 1.1**: Click on this [Google Spreadsheet link](https://docs.google.com/spreadsheets/d/1AwblgsKNqhV6n6_jwJASYAMdXEvDkXwcBfXqgTKxBKc).
 - **Step 1.2**: Go to `File` -> `Make a copy`.
 
 #### Google Form
-- **Step 1.3**: Click on this [Google Form link](HyperlinkHere).
+- **Step 1.3**: Click on this [Google Form link](https://docs.google.com/forms/d/1e0y4KoUm4ixYAx-mn5XKrfzxkleW7CxeRMIDdScKkzc).
 - **Step 1.4**:  Use the `...` (More) menu in the upper-right corner and select `Make a copy` to create a copy of the form in your Google Drive.
 
-**Note**: After duplicating, you'll need to manually link the Google Form to the Google Spreadsheet. To do this, go to the Google Form, click on the Responses tab, then click on the Google Sheets icon.
+**Note**: After you've duplicated both the Google Form and Spreadsheet, you'll need to link them together. It's simple! Just head over to your Google Form, click on the 'Responses' tab, and then hit the Google Sheets icon. Make sure to select the copied spreadsheet from your Drive. And guess what? The first time you open your new Google Spreadsheet, it initializes an empty 'Transactions' sheet that's directly linked to the Form. Now that's what we call seamless automation! 🎉
+
+After duplicating the Google Form and Spreadsheet, you'll need to manually link them. Simply go to the Google Form, click on the "Responses" tab, and then click on the Google Sheets icon to select your duplicated spreadsheet. Here's the magic part: The first time you open your new spreadsheet, it automatically runs an initialization script. This script takes care of emptying "Transactions" sheet, and emptying the monthly summary and details. Just by opening the spreadsheet, you're all set and ready to go—how awesome is that? 🚀
+
 
 ### Step 2: Setup Email Addresses 📧
 
@@ -34,6 +42,7 @@ After duplicating the shared Google Spreadsheet, you'll find it has the followin
 - **Monthly Summary**: For summarizing the loan details.
 - **Monthly Details**: For capturing detailed transactions.
 - **Email Addresses**: For storing email addresses and other email-related information.
+- **Interest Rate Changes**: Tracks any changes in the yearly interest rate. More on this below.
 
 The 'Email Addresses' sheet should have the following structure:
 
@@ -46,6 +55,16 @@ The 'Email Addresses' sheet should have the following structure:
 - **Email Subject**: The subject line for the email notification. This is optional and a default subject will be used if left blank.
 - **Thread ID**: This field is used by the script to keep track of the email thread and should be left empty initially.
 
+The 'Interest Rate Changes' sheet should have the following structure:
+
+| Date of Change | Updated Yearly Interest Rate |
+|----------------|-----------------------------|
+| 2021-01-01     | 5.5                         |
+| 2022-01-01     | 4.5                         |
+
+- **Date of Change**: The date when the yearly interest rate was changed.
+- **Updated Yearly Interest Rate**: The updated yearly interest rate in percentage.
+
 ### Step 3: Use the Custom Menu in Google Spreadsheet 🛠
 
 In the Google Spreadsheet, you'll find a custom menu at the top named **"Custom Menu: Run Monthly Update / Send Email / Setup Trigger."** This menu provides you with three powerful options:
@@ -54,6 +73,10 @@ In the Google Spreadsheet, you'll find a custom menu at the top named **"Custom 
 2. **Send Email**: Manually triggers the sending of the Monthly Summary email.
 3. **Setup Trigger**: Automates the system to update content and send emails every 1st of the month at 10 a.m.. This function just needs to be run once to set up the trigger. However, it's implemented robustly, so don't worry if you accidentally run it more than once.
 
-## Collaborations
+### Step 4: Fill in the Google Form 📝
+
+Once everything is set up, all you need to do is fill in the Google Form to add new loan transactions or repayments. The system will automatically update the Monthly Summary and Details, and you'll receive email notifications as per your setup. It's that simple!
+
+## Collaborations 🤝
 
 This project is developed in collaboration with GPT-4 by OpenAI.
