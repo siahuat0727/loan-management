@@ -82,6 +82,8 @@ In the Google Spreadsheet, you'll find a custom menu at the top named **"Custom 
 
 Once everything is set up, all you need to do is fill in the Google Form to add new loan transactions or repayments. The system will automatically update the Monthly Summary and Details, and you'll receive email notifications as per your setup. It's that simple!
 
+![](google-form.png)
+
 ## Collaborations 🤝
 
 This project is developed in collaboration with GPT-4 by OpenAI.
