@@ -1,4 +1,4 @@
-# Loan Management System: Google Sheets & Google App Script 🚀
+# Loan Management with Google Sheets & Google Form 🚀
 
 ## Introduction 🌟
 
